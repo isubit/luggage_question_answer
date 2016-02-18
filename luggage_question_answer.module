@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the luggage_question_answer feature.
+ */
+
+include_once 'luggage_question_answer.features.inc';
