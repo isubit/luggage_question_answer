@@ -5,3 +5,14 @@
  */
 
 include_once 'luggage_question_answer.features.inc';
+
+/**
+ * Implemenets hook_permission().
+ */
+function luggage_question_answer_permission() {
+  return array (
+    'moderate questions and answers' => array (
+      'title' => t('Moderate questions and answers'),
+    ),
+  );
+}
