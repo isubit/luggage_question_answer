@@ -36,6 +36,13 @@ function luggage_question_answer_views_default_views() {
   $handler->display->display_options['style_options']['autoheight'] = 0;
   $handler->display->display_options['style_options']['disableifone'] = 1;
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = 'Have a question that needs answered? <a href="node/add/qa">Ask it</a>.';
+  $handler->display->display_options['header']['area']['format'] = 'wysiwyg';
   /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';

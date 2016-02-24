@@ -16,3 +16,28 @@ function luggage_question_answer_permission() {
     ),
   );
 }
+
+
+/**
+ * Implements hook_form_FORMID_alter().
+ */
+function luggage_question_answer_form_qa_node_form_alter(&$form, &$form_state, $form_id) {
+  // If the current user doesn't have permission to moderate Q&A, disable
+  // the answer fields.
+  if (!user_access('moderate questions and answers')) {
+    // Disable Answer, Answered By, and Answered By URL fields
+    $form['field_qa_answer']['#access'] = FALSE;
+    $form['field_qa_answer_by']['#access'] = FALSE;
+    $form['field_qa_answer_by_url']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_page_build().
+ */
+function luggage_question_answer_page_build(&$page) {
+  // Change the page title on adding a Q&A node.
+  if (current_path() == 'node/add/qa') {
+    drupal_set_title(t('Ask a Question'));
+  }
+}
