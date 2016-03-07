@@ -103,8 +103,7 @@ function luggage_question_answer_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_qa';
   $strongarm->value = array(
-    0 => 'status',
-    1 => 'promote',
+    0 => 'promote',
   );
   $export['node_options_qa'] = $strongarm;
 
