@@ -62,7 +62,8 @@ function luggage_question_answer_user_default_permissions() {
   $permissions['moderate questions and answers'] = array(
     'name' => 'moderate questions and answers',
     'roles' => array(
-      'authenticated user' => 'authenticated user',
+      'content editor' => 'content editor',
+      'site admin' => 'site admin',
     ),
     'module' => 'luggage_question_answer',
   );
