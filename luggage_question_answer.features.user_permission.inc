@@ -68,6 +68,7 @@ function luggage_question_answer_user_default_permissions() {
     'name' => 'moderate questions and answers',
     'roles' => array(
       'Q&A Moderator' => 'Q&A Moderator',
+      'content editor' => 'content editor',
       'site admin' => 'site admin',
     ),
     'module' => 'luggage_question_answer',
