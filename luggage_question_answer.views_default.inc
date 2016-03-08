@@ -110,6 +110,7 @@ function luggage_question_answer_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -127,7 +128,6 @@ function luggage_question_answer_views_default_views() {
   $handler->display->display_options['fields']['field_qa_answer']['table'] = 'field_data_field_qa_answer';
   $handler->display->display_options['fields']['field_qa_answer']['field'] = 'field_qa_answer';
   $handler->display->display_options['fields']['field_qa_answer']['alter']['max_length'] = '250';
-  $handler->display->display_options['fields']['field_qa_answer']['alter']['more_link'] = TRUE;
   $handler->display->display_options['fields']['field_qa_answer']['alter']['more_link_text'] = 'Continue Reading Answer';
   $handler->display->display_options['fields']['field_qa_answer']['alter']['more_link_path'] = '[path]';
   $handler->display->display_options['fields']['field_qa_answer']['alter']['trim'] = TRUE;
@@ -135,13 +135,16 @@ function luggage_question_answer_views_default_views() {
   $handler->display->display_options['fields']['field_qa_answer']['settings'] = array(
     'trim_length' => '250',
   );
-  /* Field: Content: Edit link */
-  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['label'] = '';
-  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  /* Field: Read more */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Read more';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Read the full answer';
+  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['path'] = 'qa';
 
   /* Display: Admin Page */
