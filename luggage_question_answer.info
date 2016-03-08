@@ -32,7 +32,6 @@ features[field_instance][] = node-qa-field_qa_name
 features[field_instance][] = node-qa-field_qa_question
 features[field_instance][] = node-qa-field_qa_question_short
 features[node][] = qa
-features[rules_config][] = rules_q_a_new_question
 features[rules_config][] = rules_q_a_question_answered
 features[user_permission][] = create qa content
 features[user_permission][] = delete any qa content
