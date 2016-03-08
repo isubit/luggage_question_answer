@@ -53,4 +53,5 @@ features[variable][] = node_options_qa
 features[variable][] = node_preview_qa
 features[variable][] = node_submitted_qa
 features[variable][] = pathauto_node_qa_pattern
+features[variable][] = publishcontent_qa
 features[views_view][] = questions_and_answers
