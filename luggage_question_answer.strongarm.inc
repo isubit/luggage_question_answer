@@ -85,6 +85,13 @@ function luggage_question_answer_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'honeypot_form_qa_node_form';
+  $strongarm->value = 1;
+  $export['honeypot_form_qa_node_form'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_qa';
   $strongarm->value = array(
     0 => 'main-menu',
