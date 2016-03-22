@@ -23,7 +23,7 @@ function luggage_question_answer_permission() {
  */
 function luggage_question_answer_form_qa_node_form_alter(&$form, &$form_state, $form_id) {
   // If the current user doesn't have permission to moderate Q&A, disable
-  // the answer fields.
+  // some fields.
   if (!user_access('moderate questions and answers')) {
     // Disable Answer, Answered By, and Answered By URL fields
     $form['field_qa_answer']['#access'] = FALSE;
@@ -31,6 +31,8 @@ function luggage_question_answer_form_qa_node_form_alter(&$form, &$form_state, $
     $form['field_qa_answer_by_url']['#access'] = FALSE;
     $form['field_category']['#access'] = FALSE;
     $form['field_tags']['#access'] = FALSE;
+    $form['field_qa_images']['#access'] = FALSE;
+    $form['field_qa_files']['#access'] = FALSE;
 
     // Change the submit button to say "Ask".
     $form['actions']['submit']['#value'] = t('Ask');
