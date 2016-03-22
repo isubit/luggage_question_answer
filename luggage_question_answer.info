@@ -36,6 +36,7 @@ features[field_instance][] = node-qa-field_qa_email
 features[field_instance][] = node-qa-field_qa_name
 features[field_instance][] = node-qa-field_qa_question
 features[field_instance][] = node-qa-field_qa_question_short
+features[field_instance][] = node-qa-field_tags
 features[node][] = qa
 features[rules_config][] = rules_q_a_new_question_asker
 features[rules_config][] = rules_q_a_new_question_mail_moderators

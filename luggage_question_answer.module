@@ -30,6 +30,7 @@ function luggage_question_answer_form_qa_node_form_alter(&$form, &$form_state, $
     $form['field_qa_answer_by']['#access'] = FALSE;
     $form['field_qa_answer_by_url']['#access'] = FALSE;
     $form['field_category']['#access'] = FALSE;
+    $form['field_tags']['#access'] = FALSE;
   }
 }
 

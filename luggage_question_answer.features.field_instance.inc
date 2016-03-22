@@ -26,9 +26,10 @@ function luggage_question_answer_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
       ),
       'search_index' => array(
         'label' => 'inline',
@@ -47,7 +48,7 @@ function luggage_question_answer_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -110,7 +111,7 @@ function luggage_question_answer_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_trimmed',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -159,7 +160,7 @@ function luggage_question_answer_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -201,7 +202,7 @@ function luggage_question_answer_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -236,7 +237,7 @@ function luggage_question_answer_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -257,13 +258,13 @@ function luggage_question_answer_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'search_index' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -275,7 +276,7 @@ function luggage_question_answer_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -293,7 +294,7 @@ function luggage_question_answer_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -314,13 +315,13 @@ function luggage_question_answer_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'search_index' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -332,7 +333,7 @@ function luggage_question_answer_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -381,7 +382,7 @@ function luggage_question_answer_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -423,7 +424,7 @@ function luggage_question_answer_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -472,7 +473,7 @@ function luggage_question_answer_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -493,7 +494,7 @@ function luggage_question_answer_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'search_index' => array(
         'label' => 'inline',
@@ -510,10 +511,11 @@ function luggage_question_answer_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
+        'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
+        'type' => 'text_default',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -562,7 +564,69 @@ function luggage_question_answer_field_default_field_instances() {
         'size' => 100,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-qa-field_tags'.
+  $field_instances['node-qa-field_tags'] = array(
+    'bundle' => 'qa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Add Tags to help users find related content. Enter Tags as a comma delimited string.
+Baseball, bat, glove, ...',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+      'search_index' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tags',
+    'label' => 'Tags',
+    'placeholder' => '',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 2,
     ),
   );
 
@@ -571,6 +635,8 @@ function luggage_question_answer_field_default_field_instances() {
   t('(Not required, but we will be unable to respond personally)');
   t('A short, abbreviated version of the question to be used as a title for the question. (maximum 120 characters)');
   t('Abbreviated Question');
+  t('Add Tags to help users find related content. Enter Tags as a comma delimited string.
+Baseball, bat, glove, ...');
   t('Answer');
   t('Answered By');
   t('Category');
@@ -578,6 +644,7 @@ function luggage_question_answer_field_default_field_instances() {
   t('Name');
   t('Name, title, and an optional URL for this person (possibly their profile page)');
   t('Question');
+  t('Tags');
 
   return $field_instances;
 }
