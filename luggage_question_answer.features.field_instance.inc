@@ -185,21 +185,21 @@ function luggage_question_answer_field_default_field_instances() {
     'description' => 'Name, title, and an optional URL for this person (possibly their profile page)',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 2,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
         'weight' => 2,
       ),
       'rss' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
