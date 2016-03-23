@@ -31,6 +31,12 @@ function luggage_question_answer_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 3,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'search_index' => array(
         'label' => 'inline',
         'module' => 'taxonomy',
@@ -82,6 +88,13 @@ function luggage_question_answer_field_default_field_instances() {
         'weight' => 1,
       ),
       'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'rss' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -185,6 +198,13 @@ function luggage_question_answer_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 2,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 2,
+      ),
       'search_index' => array(
         'label' => 'inline',
         'module' => 'link',
@@ -260,6 +280,12 @@ function luggage_question_answer_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'search_index' => array(
         'label' => 'above',
         'settings' => array(),
@@ -315,6 +341,12 @@ function luggage_question_answer_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'search_index' => array(
         'label' => 'inline',
@@ -396,6 +428,12 @@ function luggage_question_answer_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'search_index' => array(
         'label' => 'inline',
@@ -487,6 +525,12 @@ function luggage_question_answer_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'search_index' => array(
         'label' => 'above',
         'settings' => array(),
@@ -571,6 +615,13 @@ function luggage_question_answer_field_default_field_instances() {
         'weight' => 0,
       ),
       'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'rss' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -666,6 +717,12 @@ function luggage_question_answer_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 5,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'search_index' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -758,6 +815,12 @@ Baseball, bat, glove, ...',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'search_index' => array(
