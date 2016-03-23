@@ -36,6 +36,10 @@ function luggage_question_answer_form_qa_node_form_alter(&$form, &$form_state, $
 
     // Change the submit button to say "Ask".
     $form['actions']['submit']['#value'] = t('Ask');
+
+    // Change the label for Abbreviated Question to Question Subject.
+    $form['field_qa_question_short']['und'][0]['value']['#title'] = t('Question Subject');
+
   }
 }
 
