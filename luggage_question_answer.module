@@ -25,7 +25,7 @@ function luggage_question_answer_form_qa_node_form_alter(&$form, &$form_state, $
   // If the current user doesn't have permission to moderate Q&A, disable
   // some fields.
   if (!user_access('moderate questions and answers')) {
-    // Disable Answer, Answered By, and Answered By URL fields
+    // Disable Answer, Answered By, and Answered By URL fields.
     $form['field_qa_answer']['#access'] = FALSE;
     $form['field_qa_answer_by']['#access'] = FALSE;
     $form['field_qa_answer_by_url']['#access'] = FALSE;
@@ -46,5 +46,20 @@ function luggage_question_answer_page_build(&$page) {
   // Change the page title on adding a Q&A node.
   if (current_path() == 'node/add/qa') {
     drupal_set_title(t('Ask a Question'));
+  }
+}
+
+/**
+ * Implements template_preprocess_html().
+ */
+function luggage_question_answer_preprocess_html(&$vars) {
+  // Add RSS Feed to QA pages.
+  if (drupal_get_path_alias() == 'qa' || substr(drupal_get_path_alias(), 0, 3) == 'qa/') {
+    drupal_add_html_head_link(array(
+      'rel' => 'alternate',
+      'type' => 'application/rss+xml',
+      'title' => 'Questions and Answers',
+      'href' => $GLOBALS['base_url'] . '/qa/rss.xml',
+    ));
   }
 }
