@@ -70,3 +70,15 @@ function luggage_question_answer_preprocess_html(&$vars) {
     drupal_add_css(drupal_get_path('module', 'luggage_question_answer') . '/luggage_question_answer.css');
   }
 }
+
+/**
+ * Implements template_preprocess_field().
+ */
+function luggage_question_answer_preprocess_field(&$vars, $hook) {
+  // New lines in plain text question should get <br />s.
+  if ($vars['element']['#field_name'] == 'field_qa_question') {
+    // check_plain is already run before this string gets here. Then gets run
+    // again with check_markup. Avoiding double encoding.
+    $vars['items'][0]['#markup'] = check_markup(decode_entities($vars['items'][0]['#markup']), 'plain_text');
+  }
+}
