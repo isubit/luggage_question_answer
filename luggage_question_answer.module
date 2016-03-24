@@ -82,3 +82,30 @@ function luggage_question_answer_preprocess_field(&$vars, $hook) {
     $vars['items'][0]['#markup'] = check_markup(decode_entities($vars['items'][0]['#markup']), 'plain_text');
   }
 }
+
+/**
+ * Implements hook_default_rules_configuration_alter().
+ */
+function luggage_question_answer_default_rules_configuration_alter(&$configs) {
+  // Alter the default config for sending email to moderators so that it's
+  // based on the name of the role rather than an unpredictible number role ID.
+  $roleID = array_search('Q&A Moderator', user_roles());
+
+  $configs['rules_q_a_new_question_mail_moderators'] = entity_import('rules_config', '{ "rules_q_a_new_question_mail_moderators" : {
+      "LABEL" : "Q\\u0026A New Question Mail Moderators",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "rules" ],
+      "ON" : { "node_insert--qa" : { "bundle" : "qa" } },
+      "DO" : [
+        { "mail_to_users_of_role" : {
+            "roles" : { "value" : { "' .  $roleID . '" : "' . $roleID . '" } },
+            "subject" : "New question for [site:name]",
+            "message" : "A new question has been submitted to [site:name]. A Q\\u0026A moderator can log into the site and answer the question on the site at [node:url]\\r\\n\\r\\nFrom: [node:field-qa-name] [node:field-qa-email]\\r\\n\\r\\n[node:field-qa-question-short]\\r\\n\\r\\n[node:field-qa-question]\\r\\n",
+            "from" : "[site:mail]"
+          }
+        }
+      ]
+    }
+  }');
+}
