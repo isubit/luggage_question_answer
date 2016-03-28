@@ -208,7 +208,9 @@ function luggage_question_answer_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<a href="qa">View already answered questions</a>';
+  $handler->display->display_options['header']['area']['content'] = '<p>The following are questions awaiting an answer or are not yet published. Click "Edit" to add an answer and publish the Q&A.</p> 
+
+<a href="qa">View already answered questions.</a>';
   $handler->display->display_options['header']['area']['format'] = 'wysiwyg';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Path */

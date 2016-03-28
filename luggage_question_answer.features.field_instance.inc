@@ -266,7 +266,7 @@ function luggage_question_answer_field_default_field_instances() {
     'bundle' => 'qa',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '(Not required, but we will be unable to respond personally)',
+    'description' => 'Not required, but we will be unable to respond personally.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -865,7 +865,6 @@ Baseball, bat, glove, ...',
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('(Not required, but we will be unable to respond personally)');
   t('A short, abbreviated version of the question to be used as a title for the question. (maximum 120 characters)');
   t('Abbreviated Question');
   t('Add Tags to help users find related content. Enter Tags as a comma delimited string.
@@ -878,6 +877,7 @@ Baseball, bat, glove, ...');
   t('Image(s)');
   t('Name');
   t('Name, title, and an optional URL for this person (possibly their profile page)');
+  t('Not required, but we will be unable to respond personally.');
   t('Question');
   t('Tags');
 

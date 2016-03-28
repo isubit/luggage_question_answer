@@ -45,7 +45,6 @@ features[field_instance][] = node-qa-field_qa_question_short
 features[field_instance][] = node-qa-field_tags
 features[node][] = qa
 features[rules_config][] = rules_q_a_new_question_asker
-features[rules_config][] = rules_q_a_new_question_mail_moderators
 features[rules_config][] = rules_q_a_question_answered
 features[user_permission][] = create qa content
 features[user_permission][] = delete any qa content
