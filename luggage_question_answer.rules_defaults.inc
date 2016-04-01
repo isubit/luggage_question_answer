@@ -20,7 +20,7 @@ function luggage_question_answer_default_rules_configuration() {
         { "mail" : {
             "to" : "[node:field-qa-email]",
             "subject" : "Your question at [site:name]",
-            "message" : "Thank you for asking a question. We\\u2019ll attempt to make our best effort to answer reasonable questions that could be interesting and informative to a wide range of people. Questions and answers will be posted on our website. Questions can be edited or adapted from their original form, and not all are guaranteed to be answered. (Note: We do not do homework, give financial advice, or provide research support.)\\r\\n\\r\\nYour Question:\\r\\n[node:field-qa-question-short]\\r\\n\\r\\n[node:field-qa-question]\\r\\n\\r\\n",
+            "message" : "Thank you for asking a question. We\\u2019ll attempt to make our best effort to answer reasonable questions that could be interesting and informative to a wide range of people. Questions and answers will be posted on our website. Questions can be edited or adapted from their original form, and not all are guaranteed to be answered. (Note: We do not do homework, give financial advice, or provide research support.)\\r\\n\\r\\nSee answered questions at [site:url]\\/qa",
             "from" : "[site:mail]",
             "language" : [ "" ]
           }
