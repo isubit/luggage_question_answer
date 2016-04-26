@@ -54,19 +54,37 @@ function luggage_question_answer_page_build(&$page) {
 }
 
 /**
- * Implements template_preprocess_html().
+ * Implements hook_views_pre_render().
  */
-function luggage_question_answer_preprocess_html(&$vars) {
-  if (drupal_get_path_alias() == 'qa' || substr(drupal_get_path_alias(), 0, 3) == 'qa/') {
+function luggage_question_answer_views_pre_render(&$view) {
+  if ($view->name == 'questions_and_answers' && $view->current_display == 'page' ) {
     // Add RSS Feed to QA pages.
+
+    $rss_url = $GLOBALS['base_url'] . '/' . $view->display['feed_1']->display_options['path'];
+
     drupal_add_html_head_link(array(
       'rel' => 'alternate',
       'type' => 'application/rss+xml',
       'title' => 'Questions and Answers',
-      'href' => $GLOBALS['base_url'] . '/qa/rss.xml',
+      'href' => $rss_url,
     ));
 
+    // update the footer RSS icon URL.
+    if (!empty($view->footer['area']->options['content'])) {
+      $view->footer['area']->options['content'] = str_replace("qa/rss.xml", $rss_url, $view->footer['area']->options['content']);
+    }
+
     // Custom CSS for QA Pages
+    drupal_add_css(drupal_get_path('module', 'luggage_question_answer') . '/luggage_question_answer.css');
+  }
+}
+
+/**
+ * Implements hook_node_view().
+ */
+function luggage_question_answer_node_view($node, $view_mode, $langcode) {
+  // Add luggage_question_answer.css to qa nodes.
+  if ($node->type == 'qa') {
     drupal_add_css(drupal_get_path('module', 'luggage_question_answer') . '/luggage_question_answer.css');
   }
 }
