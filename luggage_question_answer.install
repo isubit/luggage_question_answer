@@ -1,0 +1,22 @@
+<?php
+
+/**
+* Renames Q&A Moderator role to QA Moderator.
+*/
+function luggage_question_answer_update_7000() {
+  $role_name = 'Q&A Moderator';
+  $role = user_role_load_by_name($role_name);
+
+  // Use $query for readability & grab users with role to be replaced
+  $query = 'SELECT ur.uid 
+    FROM {users_roles} AS ur
+    WHERE ur.rid = :rids';
+  $result = db_query($query, array(':rids' => $role->rid));
+  $uids = $result->fetchCol();
+
+  $role_replace_name = 'QA Moderator';
+  $role_replace = user_role_load_by_name($role_replace_name);
+
+  user_multiple_role_edit($uids, 'add_role', $role_replace->rid);
+  user_role_delete($role_name);
+}

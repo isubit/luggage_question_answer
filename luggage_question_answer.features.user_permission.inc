@@ -14,7 +14,7 @@ function luggage_question_answer_user_default_permissions() {
   $permissions['create qa content'] = array(
     'name' => 'create qa content',
     'roles' => array(
-      'Q&A Moderator' => 'Q&A Moderator',
+      'QA Moderator' => 'QA Moderator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
@@ -25,7 +25,7 @@ function luggage_question_answer_user_default_permissions() {
   $permissions['delete any qa content'] = array(
     'name' => 'delete any qa content',
     'roles' => array(
-      'Q&A Moderator' => 'Q&A Moderator',
+      'QA Moderator' => 'QA Moderator',
       'content editor' => 'content editor',
       'site admin' => 'site admin',
     ),
@@ -36,7 +36,7 @@ function luggage_question_answer_user_default_permissions() {
   $permissions['delete own qa content'] = array(
     'name' => 'delete own qa content',
     'roles' => array(
-      'Q&A Moderator' => 'Q&A Moderator',
+      'QA Moderator' => 'QA Moderator',
       'content editor' => 'content editor',
       'site admin' => 'site admin',
     ),
@@ -47,7 +47,7 @@ function luggage_question_answer_user_default_permissions() {
   $permissions['edit any qa content'] = array(
     'name' => 'edit any qa content',
     'roles' => array(
-      'Q&A Moderator' => 'Q&A Moderator',
+      'QA Moderator' => 'QA Moderator',
       'content editor' => 'content editor',
     ),
     'module' => 'node',
@@ -57,7 +57,7 @@ function luggage_question_answer_user_default_permissions() {
   $permissions['edit own qa content'] = array(
     'name' => 'edit own qa content',
     'roles' => array(
-      'Q&A Moderator' => 'Q&A Moderator',
+      'QA Moderator' => 'QA Moderator',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -67,7 +67,7 @@ function luggage_question_answer_user_default_permissions() {
   $permissions['moderate questions and answers'] = array(
     'name' => 'moderate questions and answers',
     'roles' => array(
-      'Q&A Moderator' => 'Q&A Moderator',
+      'QA Moderator' => 'QA Moderator',
       'content editor' => 'content editor',
       'site admin' => 'site admin',
     ),
@@ -78,7 +78,7 @@ function luggage_question_answer_user_default_permissions() {
   $permissions['view any unpublished qa content'] = array(
     'name' => 'view any unpublished qa content',
     'roles' => array(
-      'Q&A Moderator' => 'Q&A Moderator',
+      'QA Moderator' => 'QA Moderator',
       'content editor' => 'content editor',
     ),
     'module' => 'view_unpublished',

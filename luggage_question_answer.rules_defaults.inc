@@ -10,7 +10,7 @@
 function luggage_question_answer_default_rules_configuration() {
   $items = array();
   $items['rules_q_a_new_question_asker'] = entity_import('rules_config', '{ "rules_q_a_new_question_asker" : {
-      "LABEL" : "Q\\u0026A New Question Mail Asker",
+      "LABEL" : "QA New Question Mail Asker",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
       "REQUIRES" : [ "rules" ],
@@ -29,7 +29,7 @@ function luggage_question_answer_default_rules_configuration() {
     }
   }');
   $items['rules_q_a_question_answered'] = entity_import('rules_config', '{ "rules_q_a_question_answered" : {
-      "LABEL" : "Q\\u0026A Question Answered",
+      "LABEL" : "QA Question Answered",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
       "REQUIRES" : [ "rules" ],
