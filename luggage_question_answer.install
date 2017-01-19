@@ -3,7 +3,7 @@
 /**
 * Renames Q&A Moderator role to QA Moderator.
 */
-function luggage_question_answer_update_7000() {
+function luggage_question_answer_update_7100() {
   $role_name = 'Q&A Moderator';
   $role = user_role_load_by_name($role_name);
 
