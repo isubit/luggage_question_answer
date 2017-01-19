@@ -112,7 +112,7 @@ function luggage_question_answer_field_default_field_instances() {
         'label' => 'above',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 600,
+          'trim_length' => 1024,
         ),
         'type' => 'text_trimmed',
         'weight' => 1,
@@ -121,7 +121,7 @@ function luggage_question_answer_field_default_field_instances() {
         'label' => 'above',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 600,
+          'trim_length' => 1024,
         ),
         'type' => 'text_trimmed',
         'weight' => 1,
@@ -732,16 +732,14 @@ function luggage_question_answer_field_default_field_instances() {
       ),
       'search_result' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
