@@ -698,6 +698,75 @@ function luggage_question_answer_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-qa-field_qa_question_rating'.
+  $field_instances['node-qa-field_qa_question_rating'] = array(
+    'bundle' => 'qa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qa_question_rating',
+    'label' => 'Rate This Question',
+    'required' => 0,
+    'settings' => array(
+      'allow_clear' => 0,
+      'allow_ownvote' => 1,
+      'allow_revote' => 1,
+      'stars' => 5,
+      'target' => 'none',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'fivestar',
+      'settings' => array(
+        'widget' => array(
+          'fivestar_widget' => 'default',
+        ),
+      ),
+      'type' => 'stars',
+      'weight' => 14,
+    ),
+  );
+
   // Exported field_instance: 'node-qa-field_qa_question_short'.
   $field_instances['node-qa-field_qa_question_short'] = array(
     'bundle' => 'qa',
@@ -879,6 +948,7 @@ Baseball, bat, glove, ...');
   t('Name, title, and an optional URL for this person (possibly their profile page)');
   t('Not required, but we will be unable to respond personally.');
   t('Question');
+  t('Rate This Question');
   t('Tags');
 
   return $field_instances;

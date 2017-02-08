@@ -75,6 +75,11 @@ function luggage_question_answer_views_default_views() {
   $handler->display->display_options['fields']['field_qa_answer']['settings'] = array(
     'trim_length' => '250',
   );
+  /* Sort criterion: Content: Rate This Question (field_qa_question_rating:rating) */
+  $handler->display->display_options['sorts']['field_qa_question_rating_rating']['id'] = 'field_qa_question_rating_rating';
+  $handler->display->display_options['sorts']['field_qa_question_rating_rating']['table'] = 'field_data_field_qa_question_rating';
+  $handler->display->display_options['sorts']['field_qa_question_rating_rating']['field'] = 'field_qa_question_rating_rating';
+  $handler->display->display_options['sorts']['field_qa_question_rating_rating']['order'] = 'DESC';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -246,6 +251,20 @@ function luggage_question_answer_views_default_views() {
   $handler->display->display_options['fields']['field_qa_name']['table'] = 'field_data_field_qa_name';
   $handler->display->display_options['fields']['field_qa_name']['field'] = 'field_qa_name';
   $handler->display->display_options['fields']['field_qa_name']['label'] = 'Asked By';
+  /* Field: Content: Rate This Question */
+  $handler->display->display_options['fields']['field_qa_question_rating']['id'] = 'field_qa_question_rating';
+  $handler->display->display_options['fields']['field_qa_question_rating']['table'] = 'field_data_field_qa_question_rating';
+  $handler->display->display_options['fields']['field_qa_question_rating']['field'] = 'field_qa_question_rating';
+  $handler->display->display_options['fields']['field_qa_question_rating']['label'] = 'Rating';
+  $handler->display->display_options['fields']['field_qa_question_rating']['click_sort_column'] = 'rating';
+  $handler->display->display_options['fields']['field_qa_question_rating']['settings'] = array(
+    'widget' => array(
+      'fivestar_widget' => 'default',
+    ),
+    'expose' => 1,
+    'style' => 'average',
+    'text' => 'average',
+  );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['groups'] = array(
     1 => 'AND',
@@ -280,6 +299,12 @@ function luggage_question_answer_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'rss';
   $handler->display->display_options['row_plugin'] = 'node_rss';
   $handler->display->display_options['row_options']['item_length'] = 'rss';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['path'] = 'qa/rss.xml';
   $export['questions_and_answers'] = $view;
 
