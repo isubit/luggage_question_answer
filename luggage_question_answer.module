@@ -74,7 +74,7 @@ function luggage_question_answer_views_pre_render(&$view) {
       $view->footer['area']->options['content'] = str_replace("qa/rss.xml", $rss_url, $view->footer['area']->options['content']);
     }
 
-    // Custom CSS for QA Pages
+    // Custom CSS for QA Pages.
     drupal_add_css(drupal_get_path('module', 'luggage_question_answer') . '/luggage_question_answer.css');
   }
 }
@@ -95,8 +95,8 @@ function luggage_question_answer_node_view($node, $view_mode, $langcode) {
 function luggage_question_answer_preprocess_field(&$vars, $hook) {
   // New lines in plain text question should get <br />s.
   if ($vars['element']['#field_name'] == 'field_qa_question') {
-    // check_plain is already run before this string gets here. Then gets run
-    // again with check_markup. Avoiding double encoding.
+    // check_plain() is already run before this string gets here.
+    // Then gets run again with check_markup. Avoiding double encoding.
     $vars['items'][0]['#markup'] = check_markup(decode_entities($vars['items'][0]['#markup']), 'plain_text');
   }
 }
@@ -106,7 +106,7 @@ function luggage_question_answer_preprocess_field(&$vars, $hook) {
  */
 function luggage_question_answer_default_rules_configuration_alter(&$configs) {
   // Alter the default config for sending email to moderators so that it's
-  // based on the name of the role rather than an unpredictable number role ID.
+  // based on the name of the role rather than an unpredictable numeric role ID.
   $roleID = array_search('Q&A Moderator', user_roles());
 
   $configs['rules_q_a_new_question_mail_moderators'] = entity_import('rules_config', '{ "rules_q_a_new_question_mail_moderators" : {
