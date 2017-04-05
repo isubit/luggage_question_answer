@@ -5,7 +5,7 @@
 */
 function luggage_question_answer_update_7100() {
   // Revert module to prepare for role update
-  features_revert_module('luggage_question_answer');
+  features_revert(array('luggage_question_answer' => array('user_role')));
 
   // Check to see if Q&A Moderator exists before deleting Q&A Moderator
   $role_name = 'Q&A Moderator';
