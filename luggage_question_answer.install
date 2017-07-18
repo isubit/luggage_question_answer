@@ -15,7 +15,7 @@ function luggage_question_answer_update_7100() {
   $role_replace_name = 'QA Moderator';
   $role_replace = user_role_load_by_name($role_replace_name);
 
-  if (!empty($role) & !empty($role_replace)) {
+  if (!empty($role) && !empty($role_replace)) {
     // Use $query for readability & grab users with role to be replaced
     $query = 'SELECT ur.uid 
       FROM {users_roles} AS ur
