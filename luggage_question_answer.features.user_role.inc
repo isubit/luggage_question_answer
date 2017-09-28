@@ -11,8 +11,8 @@ function luggage_question_answer_user_default_roles() {
   $roles = array();
 
   // Exported role: Q&A Moderator.
-  $roles['Q&A Moderator'] = array(
-    'name' => 'Q&A Moderator',
+  $roles['QA Moderator'] = array(
+    'name' => 'QA Moderator',
     'weight' => 10,
   );
 

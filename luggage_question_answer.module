@@ -107,7 +107,7 @@ function luggage_question_answer_preprocess_field(&$vars, $hook) {
 function luggage_question_answer_default_rules_configuration_alter(&$configs) {
   // Alter the default config for sending email to moderators so that it's
   // based on the name of the role rather than an unpredictable numeric role ID.
-  $roleID = array_search('Q&A Moderator', user_roles());
+  $roleID = array_search('QA Moderator', user_roles());
 
   $configs['rules_q_a_new_question_mail_moderators'] = entity_import('rules_config', '{ "rules_q_a_new_question_mail_moderators" : {
       "LABEL" : "Q\\u0026A New Question Mail Moderators",
