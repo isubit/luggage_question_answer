@@ -11,7 +11,6 @@ dependencies[] = file
 dependencies[] = honeypot
 dependencies[] = image
 dependencies[] = link
-dependencies[] = luggage_question_answer
 dependencies[] = luggage_roles
 dependencies[] = node
 dependencies[] = options
