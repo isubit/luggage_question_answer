@@ -33,6 +33,7 @@ function luggage_question_answer_form_qa_node_form_alter(&$form, &$form_state, $
     $form['field_tags']['#access'] = FALSE;
     $form['field_qa_images']['#access'] = FALSE;
     $form['field_qa_files']['#access'] = FALSE;
+    $form['field_qa_question_rating']['#access'] = FALSE;
 
     // Change the submit button to say "Ask".
     $form['actions']['submit']['#value'] = t('Ask');
